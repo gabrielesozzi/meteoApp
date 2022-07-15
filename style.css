@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --first: #3b7197;
+  --second: #4a8db7;
+  --third: #f7f8f9;
+  --fourth: #a1e1fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 1rem;
+  background-color: var(--third);
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--first);
+}
+
+.logo-title i {
+  color: var(--first);
+  font-size: 4rem;
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.day {
+  color: var(--first);
+}
+
+label {
+  color: var(--first);
+}
+
+#choose-city::-webkit-scrollbar {
+  display: none;
+}
+
+.select-container select {
+  background-color: var(--fourth);
+  color: var(--first);
+}
+
+.cardsListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--first);
+}
+
+.cityCard {
+  width: 18rem;
+  height: 25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: var(--third);
+  color: var(--first);
+  background: linear-gradient(
+    to right,
+    rgba(138, 214, 252, 1) 0%,
+    rgba(234, 245, 251, 1) 100%
+  );
+}
+
+.cityCard:hover {
+  box-shadow: rgba(5, 5, 141, 0.4) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.4) 0px 18px 36px -18px inset;
+  cursor: pointer;
+}
+
+.textWeather {
+  text-align: center;
+}
+
+.containerSelected {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--first);
+}
+
+.citySingleCard {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background: linear-gradient(
+    to right,
+    rgba(138, 214, 252, 0.8) 0%,
+    rgba(234, 245, 251, 0.8) 100%
+  );
+  color: var(--first);
+  font-weight: bolder;
+}
+
+.bari,
+.bologna,
+.catanzaro,
+.firenze,
+.laquila,
+.napoli,
+.milano,
+.potenza,
+.palermo,
+.torino,
+.ancona,
+.cagliari,
+.campobasso,
+.genova,
+.perugia,
+.roma,
+.trento,
+.trieste,
+.aosta,
+.venezia {
+  background-size: cover;
+  background-position: center;
+}
+
+.bari {
+  background-image: url("https://www.artribune.com/wp-content/uploads/2022/03/Bari.jpg");
+}
+.bologna {
+  background-image: url("https://www.turismo.bologna.it/wp-content/uploads/2019/08/la-bologna-insolita-segreta-e-curiosa-in-tredici-punti.jpg");
+}
+.catanzaro {
+  background-image: url("https://calabria.live/wp-content/uploads/2020/03/catabnz.jpg");
+}
+.firenze {
+  background-image: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sf63059cf0e80ccf2/image/id665a788410cac8c/version/1614333593/image.jpg");
+}
+.laquila {
+  background-image: url("https://cdn.getyourguide.com/img/location/5a1d4388086eb.jpeg/99.jpg");
+}
+.milano {
+  background-image: url("https://www.citydoormilano.it/upload/speciali/duomo-milano.jpg");
+}
+.napoli {
+  background-image: url("https://www.napolimilionaria.it/wp-content/uploads/2018/01/napoli-perche-citta-del-sole.jpg");
+}
+.potenza {
+  background-image: url("https://www.consigliamidove.it/wp-content/uploads/2019/05/Potenza.jpg");
+}
+.palermo {
+  background-image: url("https://siviaggia.it/wp-content/uploads/sites/2/2020/01/cattedrale_palermo.jpg");
+}
+.torino {
+  background-image: url("https://www.aggiornamentisociali.it/Archivi/AGSO/Img/0022/22517.jpg");
+}
+.ancona {
+  background-image: url("https://www.donnamoderna.com/content/uploads/2021/04/shutterstock_1552151150_alta_41301875-e1619094540207-830x625.jpg");
+}
+.cagliari {
+  background-image: url("https://cdn.getyourguide.com/img/location/545a295f8bc31.jpeg/99.jpg");
+}
+.campobasso {
+  background-image: url("https://img.ev.mu/images/portfolio/villes/36647/1605x1070/6531.jpg");
+}
+.genova {
+  background-image: url("https://siviaggia.it/wp-content/uploads/sites/2/2020/07/genova.jpg");
+}
+.perugia {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/Perugia_panoramic.jpg");
+}
+.roma {
+  background-image: url("https://travel.thewom.it/pictures/2018/06/04/cosa-vedere-roma_1.jpeg");
+}
+.trento {
+  background-image: url("https://www.ildolomiti.it/sites/default/files/articoli/Palazzo_pretorio_di_Trento.jpg");
+}
+.trieste {
+  background-image: url("https://www.residenceliberty.it/public/userfolderimages/gallery/990_Trieste002.jpg");
+}
+.aosta {
+  background-image: url("https://media-cdn.greatbritishchefs.com/media/0pbfhd5d/img83428.jpg?mode=crop&width=1423&height=711");
+}
+.venezia {
+  background-image: url("https://www.venezia-help.com/wp-content/uploads/campanile-san-marco-venezia.jpg");
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 0.4rem;
+  background-color: var(--third);
+  color: var(--first);
+}
+
+footer i {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.fa-heart:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
+.social {
+  display: flex;
+  gap: 8px;
+}
+
+.fa-github:hover {
+  color: black;
+  transition: 0.4s;
+}
+
+.fa-instagram:hover {
+  color: #ee4301;
+  transition: 0.4s;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    justify-content: space-around;
+    height: 15vh;
+  }
+
+  .logo-title {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .cityCard {
+    width: 22%;
+  }
+}
