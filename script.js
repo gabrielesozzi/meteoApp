@@ -25,9 +25,10 @@ const città = [];
 const container = document.querySelector(".container");
 
 const createCardsList = (data) => {
-  const cards = data.map(
-    (item) =>
-      `<div class="cityCard" id="${item.id}">                
+  const cards = data
+    .map(
+      (item) =>
+        `<div class="cityCard" id="${item.id}">                
           <h3>${item.name} <span>(${item.sys.country})</span> | <span>${item.main.temp}° </span></h3>
           <img src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png">       
           <div class="weatherInfo">
@@ -36,7 +37,9 @@ const createCardsList = (data) => {
           <p> <b>Temperatura percepita:</b> ${item.main.feels_like}°</p>
           </div>           
           </div>`
-  );
+    )
+    .join("");
+
   container.innerHTML = `<div class="cardsListContainer">${cards}</div>`;
 };
 
